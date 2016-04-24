@@ -4,6 +4,7 @@ Semaforo con 3 estados verde, amarillo y rojo
 verde 10s
 amarillo 2s
 rojo 5s
+LED RGB
 Kiwibot- Jose Pujol
 */
 
