@@ -7,8 +7,9 @@ Programa para medir la distancia
 const int triggerPin = 11; // Pin donde conectamos el emisor
 const int echoPin = 12; // Pin donde conectamos el receptor
 
-// Variable para almacenar la distancia
-int distance = 0;
+// variables para almacenar datos
+int duration = 0; // Variable para almacenar el tiempo
+int distance = 0; // Variable para almacenar la distancia
 
 void setup() {
   Serial.begin(9600); // Abrimos el puerto serie
@@ -25,10 +26,12 @@ void loop() {
   digitalWrite(triggerPin, LOW);
   // Medimos el ancho del pulso, cuando la lectura sea HIGH
   // devuelve el tiempo transcurrido en microsegundos
-  distance = pulseIn(echoPin, HIGH);
+  duration = pulseIn(echoPin, HIGH);
   // Calculamos la distancia en cm
-  distance = distance * 0.01715;
+  distance = duration * 0.01715;
   // Enviamos los datos medidos a traves del puerto serie
-  Serial.println (distance);
+  Serial.print (distance);
+  Serial.print ("\t");
+  Serial.println (duration);
   delay(100); // Esperamos 100ms
 }
