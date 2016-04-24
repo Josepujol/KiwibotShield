@@ -14,8 +14,8 @@ const int ledRPin = 6;       // el numero de pin del led rojo
 
 // variables que cambian
 int ledState = LOW;         // Estado actual del led apagado
-int buttonLState = 0;            // variable para almacenar el estado del pulsador
-int buttonRState = 0;            // variable para almacenar el estado del pulsador
+int buttonLState = 0;            // variable para almacenar el estado del pulsador izquierdo
+int buttonRState = 0;            // variable para almacenar el estado del pulsador derecho
 
 
 void setup() {
@@ -63,3 +63,4 @@ void loop() {
   digitalWrite(ledRPin, ledState);
 
 }
+
