@@ -4,6 +4,7 @@ Introduccion al uso del for
 verde 10s
 amarillo 2s- parpadeo de 0.2s
 rojo 5s
+LED RGB
 Kiwibot- Jose Pujol
 */
 
