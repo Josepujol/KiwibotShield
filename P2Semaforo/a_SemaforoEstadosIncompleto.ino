@@ -13,7 +13,7 @@ const int ledGPin = 9; // LED verde asociado al pin 9
 
 // la funcion set up se ejecuta una sola vez
 void setup() {
-  // inicializa el pin 5,6,9 como una salida digital
+  // inicializa el pin 5 y 9 como una salida digital
   pinMode(ledRPin, OUTPUT);
   pinMode(ledGPin, OUTPUT);
 }
