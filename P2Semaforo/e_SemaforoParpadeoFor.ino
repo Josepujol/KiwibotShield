@@ -1,6 +1,6 @@
 /*
-Semaforo con 3 simplificado verde, amarillo y rojo
-Introduccion al uso del for
+Semaforo verde, amarillo y rojo
+Usa LED RGB
 verde 10s
 amarillo 2s- parpadeo de 0.2s
 rojo 5s
