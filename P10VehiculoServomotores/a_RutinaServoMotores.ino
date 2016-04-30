@@ -1,8 +1,8 @@
 /*
 Rutina para comprobar que los servomotores funcionan correctamente
-y el printBot se mueve:
+y el Vehiculo se mueve correctamente
 adelante, atras, izquierda, derecha
-Alberto Pumar, Jose Pujol revisado noviembre 2015
+Alberto Pumar, Jose Pujol revisado abril 2016
  */
 
 // Pines de servomotores:
