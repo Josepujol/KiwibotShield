@@ -16,22 +16,28 @@ void setup() {
 
 void loop() {
 // repeticion de cada rutina
-// 500*20ms= 
   for (int i = 0; i < 500; i++) {
     go_forward();
   }
+  // tiempo de espera entre rutinas
   delay(2000);
+  // repeticion de cada rutina
   for (int i = 0; i < 500; i++) {
     go_back();
   }
+    // tiempo de espera entre rutinas
   delay(2000);
+  // repeticion de cada rutina
   for (int i = 0; i < 500; i++) {
     turn_left();
   }
+    // tiempo de espera entre rutinas
   delay(2000);
+  // repeticion de cada rutina
   for (int i = 0; i < 500; i++) {
     turn_right();
   }
+    // tiempo de espera entre rutinas
   delay(2000);
 }
 
