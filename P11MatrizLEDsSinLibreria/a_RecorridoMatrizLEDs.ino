@@ -1,6 +1,7 @@
 
 
-/* Programa que recorre los puntos de la matriz de LEDs
+/* 
+    Programa que recorre los puntos de la matriz de LEDs
  *  Control de la matriz de LEDS sin librería
  *  Jose Pujol- Kiwibot
  *  Octubre 2015
