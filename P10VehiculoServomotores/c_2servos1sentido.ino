@@ -12,7 +12,7 @@ const int servoL = 7; // servo izquierda
 void setup() {
   // servomotores salida digital
   pinMode(servoR, OUTPUT);
-  pinMode(servoR, OUTPUT);
+  pinMode(servoL, OUTPUT);
 }
 
 
