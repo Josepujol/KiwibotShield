@@ -4,15 +4,16 @@
  e imprimirla por el monitor serie
  Añadimos Time Out
  Cuando d=250cm T= 14600us
- Kiwibot- jose Pujol
+ Kiwibot- jose Pujol- Mayo 2016
  */
 // Conexion pines del sensor de distancia
 const int triggerPin = 11; // Pin donde conectamos el emisor
 const int echoPin = 12; // Pin donde conectamos el receptor
 
 // variables para almacenar datos
-int duration = 0; // Variable para almacenar el tiempo
+int duration = 0; // Variable para almacenar el tiempo de la onda
 int distance = 0; // Variable para almacenar la distancia
+// variables para almacenar tiempo actual y tiempo anterior
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
 
@@ -23,14 +24,16 @@ void setup() {
 }
 
 void loop() {
+ // grabamos el tiempo
   current_time = millis();
+  // si el tiempo es mayor que el intervalo medimos
   if (current_time - previous_time > 100) {
     previous_time = current_time;
     distance = distancia ();
     Serial.println (distance);
   }
 }
-
+// funcion para mediar la distancia
 int distancia() {
   //Inicializamos el sensor
   digitalWrite(triggerPin, LOW);
@@ -44,7 +47,7 @@ int distancia() {
   duration = pulseIn(echoPin, HIGH, 15000);
   // Calculamos la distancia en cm
   int  distance = duration * 0.01715;
-  // Enviamos los datos medidos a traves del puerto serie
+  // devolvemos la distancia
   return distance;
 }
 
