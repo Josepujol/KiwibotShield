@@ -9,7 +9,7 @@ Kiwibot- Jose Pujol
 */
 
 // Declaracion de variables de tipo constante entero
-const int ledRPin = 6; // LED rojo asociado al pin 5
+const int ledRPin = 6; // LED rojo asociado al pin 6
 const int ledGPin = 9; // LED verde asociado al pin 9
 
 // la funcion set up se ejecuta una sola vez
