@@ -6,6 +6,7 @@
  Cuando d=250cm T= 14600us
  Kiwibot- jose Pujol- Mayo 2016
  */
+
 // Conexion pines del sensor de distancia
 const int triggerPin = 11; // Pin donde conectamos el emisor
 const int echoPin = 12; // Pin donde conectamos el receptor
@@ -13,6 +14,8 @@ const int echoPin = 12; // Pin donde conectamos el receptor
 // variables para almacenar datos
 int duration = 0; // Variable para almacenar el tiempo de la onda
 int distance = 0; // Variable para almacenar la distancia
+int d=0; // variable donde almacena la distancia la funcion principal
+
 // variables para almacenar tiempo actual y tiempo anterior
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
@@ -29,12 +32,12 @@ void loop() {
   // si el tiempo es mayor que el intervalo medimos
   if (current_time - previous_time > 100) {
     previous_time = current_time;
-    distance = distancia ();
-    Serial.println (distance);
+    d = measuringdistance ();
+    Serial.println (d);
   }
 }
 // funcion para mediar la distancia
-int distancia() {
+int measuringdistance() {
   //Inicializamos el sensor
   digitalWrite(triggerPin, LOW);
   delayMicroseconds(5);
