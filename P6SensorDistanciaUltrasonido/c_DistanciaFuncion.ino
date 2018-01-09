@@ -11,11 +11,6 @@
 const int triggerPin = 11; // Pin donde conectamos el emisor
 const int echoPin = 12; // Pin donde conectamos el receptor
 
-// variables para almacenar datos
-int duration = 0; // Variable para almacenar el tiempo de la onda
-int distance = 0; // Variable para almacenar la distancia
-int d=0; // variable donde almacena la distancia la funcion principal
-
 // variables para almacenar tiempo actual y tiempo anterior
 unsigned long current_time = 0;
 unsigned long previous_time = 0;
@@ -32,12 +27,14 @@ void loop() {
   // si el tiempo es mayor que el intervalo medimos
   if (current_time - previous_time > 100) {
     previous_time = current_time;
-    d = measuringdistance ();
-    Serial.println (d);
+    cm = measuringdistance ();
+    Serial.println (cm);
   }
 }
 // funcion para mediar la distancia
 int measuringdistance() {
+  // Variable para almacenar el tiempo de la onda y la distancia
+  long duration, distance;
   //Inicializamos el sensor
   digitalWrite(triggerPin, LOW);
   delayMicroseconds(5);
@@ -48,8 +45,8 @@ int measuringdistance() {
   // Medimos el ancho del pulso, cuando la lectura sea HIGH
   // devuelve el tiempo transcurrido en microsegundos
   duration = pulseIn(echoPin, HIGH, 15000);
-  // Calculamos la distancia en cm
-  int  distance = duration * 0.01715;
+  // Calculamos la distancia en cm y la guardamos en distance
+  distance = duration * 0.01715;
   // devolvemos la distancia
   return distance;
 }
