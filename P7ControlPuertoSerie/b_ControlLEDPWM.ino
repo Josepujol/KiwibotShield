@@ -1,6 +1,6 @@
 /*
 Codigo que permite controlar el valor pwm de un led desde puerto serie
- 
+
  Hay que mirar el codigo ASCII
  Los caracteres se envian como codigo decimal del codigo ASCII
  Por ejemplo el 0 se envia como 48, el > como 62
@@ -27,9 +27,9 @@ void loop() {
     // si es un caracter ASCII entre 0 y 9
     if (incomingByte >= '0' && incomingByte <= '9') {
       //Acumula los datos numericos multiplicando por 10 el valor acumulado
-      value = (value * 10) + (incomingByte - 48); // Resta 48 que es el valor decimal del 0 ASCII
+      value = (value * 10) + (incomingByte - '0'); // Resta 48 que es el valor decimal del 0 ASCII
     }
-    else if (incomingByte == 62) // uso > como finalizador
+    else if (incomingByte == '>') // uso > como finalizador
     {
       pwmValue = value;   // Guarda el valor en la variable pwmValue
       Serial.println(pwmValue);     // Lo imprime por monitor serie
