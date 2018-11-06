@@ -9,7 +9,8 @@
 Matriz matriz(6, 9, 5);
 
 const int tempPin = A1;
-int tempValue = 0;
+float lectura=0;
+float tempValue = 0;
 
 void setup() {
   // nada que declarare en el setup
@@ -18,9 +19,9 @@ void setup() {
 void loop() {
 
   //lectura de la temperatura
-  tempValue = analogRead(tempPin);
+  lectura = analogRead(tempPin);
   //formula de la temperatura para sensor LM35
-  tempValue = (tempValue * 5 * 100) / 1024;
+  tempValue = (lectura * 5.0 * 100.0) / 1024.0;
   // representa el numero en la matriz
   matriz.printNumber(tempValue);
 
