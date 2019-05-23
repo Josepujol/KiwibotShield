@@ -1,6 +1,6 @@
 
 # LaserBot
-Es un vehiculo móvil que usa el escudo KiwiBot y un chasis fabricado con cortadora láser
+Es un vehiculo móvil que usa el escudo KiwiBot y un chasis fabricado con cortadora láser diseñado por fablab Sevilla en colaboración con Jose Pujol
 
 <img src="laserbot.jpg" width="400" align="center">
 
