@@ -2,6 +2,8 @@
 # LaserBot
 Es un vehiculo móvil que usa el escudo KiwiBot y un chasis fabricado con cortadora láser
 
+<img src="laserbot.jpg" width="200" align="center">
+
 El chásis lo podemos encontrar en Thingiverse https://www.thingiverse.com/thing:1216952
 
 En el repositorio podemos encontrar:
