@@ -10,4 +10,4 @@ En el repositorio podemos encontrar:
 - App en formato nativo .aia y en formato ejecutable para controlarlo via Bluetooth
 - Código de Arduino con 2 modos de funcionamiento: Manual (App) y Automático (sensor distancia)
 
-<img src="App-laserBot.png" width="200" align="center">
+<img src="App-laserBot.png" width="400" align="center">
